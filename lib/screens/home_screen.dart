@@ -4,6 +4,7 @@ import 'package:le_deproblematisateur/screens/coffre_screen.dart';
 import 'package:le_deproblematisateur/screens/deproblematiser_screen.dart';
 import 'package:le_deproblematisateur/screens/panic_screen.dart';
 import 'package:le_deproblematisateur/screens/patente_screen.dart';
+import 'package:le_deproblematisateur/screens/problem_flow_screen.dart';
 import 'package:le_deproblematisateur/theme/app_theme.dart';
 import 'package:le_deproblematisateur/widgets/choice_card.dart';
 
@@ -15,6 +16,13 @@ class HomeScreen extends StatelessWidget {
     final theme = Theme.of(context);
 
     final entries = [
+      (
+        title: '🌪️ MON PROBLÈME',
+        subtitle: 'Décrire la situation et trouver le prochain pas.',
+        icon: Icons.edit_note_rounded,
+        accent: softCoral,
+        screen: const ProblemFlowScreen(),
+      ),
       (
         title: '🚨 PANIK',
         subtitle: 'Respire. Observe. Agis.',
