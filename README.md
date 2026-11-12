@@ -1,65 +1,55 @@
 # 🌪️ Le Déproblématisateur
 
-Transformer les problèmes en déproblèmes.
+**Trouver le calme au centre du tourbillon.** Transformer les problèmes en déproblèmes.
 
-Le Déproblématisateur aide les humains à retrouver leur capacité d'agir lorsqu'ils sont pris dans le tourbillon de la panique.
+Application Flutter Android + Web pour aider à clarifier une situation difficile et trouver un prochain pas réaliste. L’application n’est pas un service médical ni un service d’urgence.
 
-## 💛 Philosophie
+## Fonctionnalités du MVP
 
-- Trouver le calme au centre du tourbillon.
-- Transformer les problèmes en déproblèmes.
-- Créer avec ce qu'on a déjà.
-- Aller au prochain pas possible.
-- Développer une solution suffisamment bonne pour aujourd'hui.
+- Interface responsive et identité visuelle 🌪️💛
+- Parcours guidé : décrire la situation, préciser urgence, énergie, budget et temps
+- Pistes d’action adaptées aux réponses (fonctionnement local, sans IA ni compte)
+- PANIK : pause et étapes simples pour revenir au prochain pas
+- Coffre de solutions avec recherche
+- Historique local des problèmes et marquage comme terminé
+- Conservation des données sur l’appareil avec `shared_preferences`
 
-## 🚀 Démarrage rapide
+## Démarrer
 
-1. Installe Flutter : https://docs.flutter.dev/get-started/install
-2. Dans le dossier du projet :
+Installer le SDK Flutter : https://docs.flutter.dev/get-started/install
 
 ```bash
 flutter pub get
 flutter run -d chrome
 ```
 
-## 📱 Fonctionnalités
+Pour lancer sur un appareil Android connecté :
 
-- Accueil avec modules et slogans
-- Parcours complet pour décrire un problème
-- Analyse de l'urgence, énergie, budget et temps
-- Suggestions concrètes de solutions
-- Écrans PANIK, Déproblématiser, Patente à Gosse, Parfaitement Adéquat et Coffre des Solutions
-
-## 🧩 Structure du projet
-
-```text
-lib/
-  main.dart
-  models/
-    problem_model.dart
-  services/
-    problem_service.dart
-  screens/
-    home_screen.dart
-    problem_flow_screen.dart
-    panic_screen.dart
-    deproblematiser_screen.dart
-    patente_screen.dart
-    adequat_screen.dart
-    coffre_screen.dart
-  theme/
-    app_theme.dart
-  widgets/
-    choice_card.dart
-    section_card.dart
+```bash
+flutter devices
+flutter run -d <device-id>
 ```
 
-## 🌪️ Slogans
+Pour produire les builds :
 
-- Trouver le calme au centre du tourbillon.
-- Transformer les problèmes en déproblèmes.
-- Est-ce suffisamment bon pour aujourd’hui ?
+```bash
+flutter build web
+flutter build apk
+```
 
-## Vision
+Les dossiers de plateforme Flutter (`android/` et `web/`) doivent être générés avec `flutter create .` depuis la racine du projet si ton clone ne les contient pas encore. Cette commande nécessite le SDK Flutter installé.
 
-Quand la vie devient un tourbillon, trouve le calme au centre, puis fais un seul pas à la fois.
+## Données et vie privée
+
+Les problèmes saisis sont stockés localement sur l’appareil. Cette version ne synchronise pas les données entre appareils et ne les envoie pas à un serveur. Évite d’y inscrire des informations permettant d’identifier une autre personne.
+
+## Sécurité
+
+L’application propose des exercices généraux de clarification, pas un diagnostic ni un traitement. En cas de danger immédiat, contacte les services d’urgence de ta région ou une personne de confiance.
+
+## Slogans
+
+- 🌪️ Trouver le calme au centre du tourbillon.
+- 🛠️ Transformer les problèmes en déproblèmes.
+- 💛 Est-ce suffisamment bon pour aujourd’hui ?
+- « Quand la vie devient un tourbillon, trouve le calme au centre, puis fais un seul pas à la fois. »

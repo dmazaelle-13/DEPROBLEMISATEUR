@@ -1,7 +1,7 @@
 name: le_deproblematisateur
 description: "Le Déproblématisateur — trouver le calme au centre du tourbillon."
 publish_to: 'none'
-version: 1.0.0+1
+version: 1.0.0+2
 
 environment:
   sdk: ">=3.3.0 <4.0.0"
@@ -9,6 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  shared_preferences: ^2.3.2
 
 dev_dependencies:
   flutter_test:
